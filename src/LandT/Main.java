@@ -448,6 +448,14 @@ class Product implements Comparable<Product>
         return id+" "+name+" "+rating;
     }
 }
+
+class NameSort implements Comparator<Product>
+{
+    @Override
+    public int compare(Product o1, Product o2) {
+        return o1.name.compareTo(o2.name);
+    }
+}
         class Main
         {
             public static void main(String[] args) {
@@ -459,13 +467,23 @@ class Product implements Comparable<Product>
                 for(int i=0;i<n;i++)
                 {
                     int id = sc.nextInt();
+                    sc.nextLine();
                     String name = sc.nextLine();
                     int rating = sc.nextInt();
+                    sc.nextLine();
 
                     list.add(new Product(id,name,rating));
                 }
                 Collections.sort(list);
                 System.out.println("Sorted by rating");
+
+                for(Product li : list)
+                {
+                    System.out.println(li);
+                }
+
+                Collections.sort(list,new NameSort());
+                System.out.println("Sorted by name");
 
                 for(Product li : list)
                 {
