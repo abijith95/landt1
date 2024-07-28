@@ -424,5 +424,54 @@ import java.util.*;
 //       Name : A2b
 //       yearOfopening : 2010
 
+class Product implements Comparable<Product>
+{
+    int id;
+    String name;
+    int rating;
 
 
+    Product(int id,String name,int rating)
+    {
+        this.id = id;
+        this.name = name;
+        this.rating= rating;
+    }
+
+    public int compareTo(Product o)
+    {
+        return this.rating - o.rating;
+    }
+
+    public String toString()
+    {
+        return id+" "+name+" "+rating;
+    }
+}
+        class Main
+        {
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+
+                int n = sc.nextInt();
+                ArrayList<Product> list = new ArrayList<>();
+
+                for(int i=0;i<n;i++)
+                {
+                    int id = sc.nextInt();
+                    String name = sc.nextLine();
+                    int rating = sc.nextInt();
+
+                    list.add(new Product(id,name,rating));
+                }
+                Collections.sort(list);
+                System.out.println("Sorted by rating");
+
+                for(Product li : list)
+                {
+                    System.out.println(li);
+                }
+
+
+            }
+        }
