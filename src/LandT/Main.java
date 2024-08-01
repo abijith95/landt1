@@ -424,72 +424,171 @@ import java.util.*;
 //       Name : A2b
 //       yearOfopening : 2010
 
-class Product implements Comparable<Product>
-{
-    int id;
-    String name;
-    int rating;
+//class Product implements Comparable<Product>
+//{
+//    int id;
+//    String name;
+//    int rating;
+//
+//
+//    Product(int id,String name,int rating)
+//    {
+//        this.id = id;
+//        this.name = name;
+//        this.rating= rating;
+//    }
+//
+//    public int compareTo(Product o)
+//    {
+//        return this.rating - o.rating;
+//    }
+//
+//    public String toString()
+//    {
+//        return id+" "+name+" "+rating;
+//    }
+//}
+//
+//class NameSort implements Comparator<Product>
+//{
+//    @Override
+//    public int compare(Product o1, Product o2) {
+//        return o1.name.compareTo(o2.name);
+//    }
+//}
+//        class Main
+//        {
+//            public static void main(String[] args) {
+//                Scanner sc = new Scanner(System.in);
+//
+//                int n = sc.nextInt();
+//                ArrayList<Product> list = new ArrayList<>();
+//
+//                for(int i=0;i<n;i++)
+//                {
+//                    int id = sc.nextInt();
+//                    sc.nextLine();
+//                    String name = sc.nextLine();
+//                    int rating = sc.nextInt();
+//                    sc.nextLine();
+//
+//                    list.add(new Product(id,name,rating));
+//                }
+//                Collections.sort(list);
+//                System.out.println("Sorted by rating");
+//
+//                for(Product li : list)
+//                {
+//                    System.out.println(li);
+//                }
+//
+//                Collections.sort(list,new NameSort());
+//                System.out.println("Sorted by name");
+//
+//                for(Product li : list)
+//                {
+//                    System.out.println(li);
+//                }
+//
+//
+//            }
+//        }
 
 
-    Product(int id,String name,int rating)
-    {
-        this.id = id;
-        this.name = name;
-        this.rating= rating;
-    }
-
-    public int compareTo(Product o)
-    {
-        return this.rating - o.rating;
-    }
-
-    public String toString()
-    {
-        return id+" "+name+" "+rating;
-    }
-}
-
-class NameSort implements Comparator<Product>
-{
-    @Override
-    public int compare(Product o1, Product o2) {
-        return o1.name.compareTo(o2.name);
-    }
-}
-        class Main
-        {
-            public static void main(String[] args) {
-                Scanner sc = new Scanner(System.in);
-
-                int n = sc.nextInt();
-                ArrayList<Product> list = new ArrayList<>();
-
-                for(int i=0;i<n;i++)
-                {
-                    int id = sc.nextInt();
-                    sc.nextLine();
-                    String name = sc.nextLine();
-                    int rating = sc.nextInt();
-                    sc.nextLine();
-
-                    list.add(new Product(id,name,rating));
-                }
-                Collections.sort(list);
-                System.out.println("Sorted by rating");
-
-                for(Product li : list)
-                {
-                    System.out.println(li);
-                }
-
-                Collections.sort(list,new NameSort());
-                System.out.println("Sorted by name");
-
-                for(Product li : list)
-                {
-                    System.out.println(li);
-                }
 
 
-            }
-        }
+//class ShoppingCartItem {
+//       String name;
+//       int quantity;
+//       double price;
+//
+//       ShoppingCartItem(String name,int quantity,double price)
+//       {
+//           this.name = name;
+//           this.quantity = quantity;
+//           this.price = price;
+//       }
+//}
+//class ShoppingCart {
+//     double total = 0.0;
+//     ArrayList<ShoppingCartItem> list = new ArrayList<>();
+//    // Method to add a new item to the shopping cart
+//    public void addItem(ShoppingCartItem item) {
+//        total += (item.quantity * item.price);
+//           list.add(item);
+//    }
+////    Shopping Cart Contents:
+////    Item: Laptop, Quantity: 2, Price: $1200.0
+////    Item: Headphones, Quantity: 1, Price: $80.0
+////    Item: Notebook, Quantity: 3, Price: $5.5
+////    Total Cost: $2496.5
+//    public void displayItem()
+//    {
+//        for(ShoppingCartItem ite : list)
+//        {
+//            System.out.println("Item: "+ite.name+", Quantity: "+ite.quantity+", Price: "+ite.price);
+//        }
+//        System.out.println("Total Cost: $"+total);
+//    }
+//}
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        ShoppingCart shoppingCart = new ShoppingCart();
+//        Scanner scanner = new Scanner(System.in);
+//
+//        while (true)
+//        {
+//            String name = scanner.nextLine();
+//
+//            if(name.equals("exit"))
+//            {
+//                System.out.println("Shopping cart contents: ");
+//                shoppingCart.displayItem();
+//                break;
+//            }
+//            else {
+//                int quantity = scanner.nextInt();
+//                scanner.nextLine();
+//
+//                double price = scanner.nextDouble();
+//                scanner.nextLine();
+//
+//                shoppingCart.addItem(new ShoppingCartItem(name, quantity, price));
+//            }
+//        }
+//
+//        scanner.close();
+//    }
+//}
+
+
+//class Main
+//{
+//    public static void main(String[] args) {
+//       int[] rating = {4,6,4,5,6,2};
+//
+//       int[] score = new int[rating.length];
+//       score[0] = 1;
+//       int store = 1;
+//
+//       for(int i=1;i<rating.length;i++)
+//       {
+//           if(rating[i] > rating[i-1])
+//           {
+//               score[i] = ++store;
+//           }
+//           else {
+//               --store;
+//               score[i] = 1;
+//           }
+//       }
+//        System.out.println(Arrays.toString(score));
+//       int sum = 0;
+//       for(int i=0;i<score.length;i++)
+//       {
+//           sum += score[i];
+//       }
+//        System.out.println(sum);
+//    }
+//}
