@@ -592,3 +592,44 @@ import java.util.*;
 //        System.out.println(sum);
 //    }
 //}
+
+
+
+//class Main
+//{
+//    public static void main(String[] args) {
+//        int n = 5;
+//        int first = 0;
+//        int second = 1;
+//        int third = 0;
+//        for(int i=2;i<=n;i++)
+//        {
+//             third = first + second;
+//            first = second;
+//            second = third;
+//        }
+//        System.out.println(third);
+//    }
+//}
+
+
+class Main
+{
+    public static void main(String[] args) {
+         int n = 13;
+         int first = 0;
+         int second  = 1;
+         int third = 0;
+//        System.out.print(first+" "+second);
+
+
+         for(int i=2;i<=n;i++)
+         {
+             third = first + second;
+//             System.out.print(third+" ");
+             first = second;
+             second = third;
+         }
+        System.out.println(third);
+    }
+}
